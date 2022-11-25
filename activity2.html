@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PDC20</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body ng-app="" style="background-color:powderblue;">
+        
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3" style="margin: 50px">
+            <div class="container h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                  <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+
+        <h1>Welcome</h1>
+        <h2>Homepage</h2>
+        <h3>Registration/Login</h3>
+
+        <form name="form">
+
+            <!-- ng-hide -->
+            <div ng-hide="toShow">
+                Enter Username:
+                <input type="text" required ng-model="Name"/>
+                <br>
+                <br>
+                <input type="button" ng-disabled="form.$invalid" ng-click="toShow = true" value="Sign in"/>
+                <!-- ng-click -->
+            </div>
+
+            <!-- ng-show -->
+            <div ng-show="toShow">
+                Sign in successful. 
+                <br>
+                <input type="button" ng-click="toShow = false" value="Logout"/>
+                <!-- ng-click -->
+            </div>
+
+        </form>
+   
+    </body>
+</html>
